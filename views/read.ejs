@@ -6,34 +6,36 @@
 
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Employees</h2>
+<h2>Games</h2>
 <table class="table table-striped table-bordered">
   <tr>
-    <th>ID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
-    <th>Home Phone</th>
-    <th>Cell Phone</th>
-    <th>Password</th>
-    <th>Active</th>
+    <th>Game ID</th>
+    <th>Game Name</th>
+    <th>Country Of Origin</th>
+    <th>Year Developed</th>
+    <th>Creator</th>
+    <th>Brand</th>
+    <th>Game Type</th>
+    <th>Min # of Players</th>
+    <th>Max # of Players</th>
   </tr>
-  <% if(typeof employees != "undefined" && employees.length > 0){ %>
-    <% employees.forEach(function(employee){ %>
+  <% if(typeof boardgames != "undefined" && boardgames.length > 0){ %>
+    <% boardgames.forEach(function(boardgame){ %>
       <tr>
-        <td><%= employee.id %></td>
-        <td><%= employee.firstName %></td>
-        <td><%= employee.lastName %></td>
-        <td><%= employee.email %></td>
-        <td><%= employee.homePhone %></td>
-        <td><%= employee.cellPhone %></td>
-        <td><%= employee.password %></td>
-        <td><%= employee.active %></td>
+        <td><%= boardgame.id %></td>
+        <td><%= boardgame.gameName %></td>
+        <td><%= boardgame.countryOrigin %></td>
+        <td><%= boardgame.yearDeveloped %></td>
+        <td><%= boardgame.creator %></td>
+        <td><%= boardgame.brand %></td>
+        <td><%= boardgame.gameType %></td>
+        <td><%= boardgame.minNumOfPlayers %></td>
+        <td><%= boardgame.maxNumOfPlayers %></td>
       </tr>
     <% }) %>
   <% }else{ %>
       <tr>
-        <td colspan="8">0 records found</td>
+        <td colspan="9">0 records found</td>
       </tr>
   <% } %>
   

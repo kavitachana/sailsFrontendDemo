@@ -1,0 +1,23 @@
+<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li class="active">Delete Game</a></li>
+</ol>
+
+<br/>
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Delete Game</h2>
+<form action="/delete" method="POST" class="form-horizontal">
+  <div class="form-group">
+    <label for="gameId" class="col-sm-2 control-label">Game ID</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="gameId" name="id" placeholder="ID of game to delete">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Delete Game</button>
+    </div>
+  </div>
+</form>
